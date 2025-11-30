@@ -37,8 +37,8 @@ cloudinary.config({
 
 
 // const allowedOrigins = [
-//   "https://employee-management-systems-cws.vercel.app",  // production frontend
-//   "https://employee-management-systems-cws.vercel.app"              // local development frontend
+//   "https://cws-employee-management-systems.vercel.app",  // production frontend
+//   "https://cws-employee-management-systems.vercel.app"              // local development frontend
 // ];
 
 // app.use(cors({
@@ -370,7 +370,7 @@ app.post("/admin/add-employee", upload.fields([
       newEmployee.verifyToken = token;
       await newEmployee.save();
 
-      const verifyLink = `https://employee-management-systems-cws.vercel.app/employee/verify/${newEmployee._id}/${encodeURIComponent(token)}`;
+      const verifyLink = `https://cws-employee-management-systems.vercel.app/employee/verify/${newEmployee._id}/${encodeURIComponent(token)}`;
 
 
       // Send email safely
@@ -763,7 +763,7 @@ app.post("/sendpasswordlink", async (req, res) => {
         from: "komal@creativewebsolution.in",
         to: email,
         subject: "Password Reset Request - Employee Management System",
-        text: `this link valid for 5 min https://employee-management-systems-cws.vercel.app1/forgotpassword/${userfind._id}/${setusertoken.verifytoken}`
+        text: `this link valid for 5 min https://cws-employee-management-systems.vercel.app1/forgotpassword/${userfind._id}/${setusertoken.verifytoken}`
       }
 
       transporter.sendMail(mailOptions, (error, info) => {
