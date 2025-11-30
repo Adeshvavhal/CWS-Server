@@ -55,7 +55,7 @@ cloudinary.config({
 
 
 const allowedOrigins = [
-  "https://employee-management-systems.vercel.app",
+  "https://cws-employee-management-systems.vercel.app",
   "http://localhost:5173"
 ];
 
